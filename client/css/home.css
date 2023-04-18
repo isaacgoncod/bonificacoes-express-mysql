@@ -1,20 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
 main {
   display: flex;
   flex-direction: column;
   padding: 50px;
 }
-main .table {
+main .modal-corpo-control {
+  width: 100%;
+  padding: 40px;
+}
+
+main .table-decorator {
   box-shadow: #64646f33 0px 7px 29px 0px;
   padding: 20px;
   border-radius: 7px;
   text-align: center;
 }
 main .table-modal {
-  width: 70%;
+  width: 100%;
+}
+
+main .btn-modal-info {
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (max-width: 500px) {
   main {
     padding: 1rem;
   }
+}
+
+/* MODAL FORM */
+main .form {
+  height: 100%;
+  width: 50%;
+}
+main .form form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+main .form form input {
+  height: 40px;
 }

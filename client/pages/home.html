@@ -27,15 +27,236 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./form.html">Novo</a>
+        <button
+          class="btn btn-primary"
+          data-mdb-toggle="modal"
+          data-mdb-target="#myModalForm"
+        >
+          Novo
+        </button>
       </div>
     </nav>
 
     <main>
-      <!-- Modal -->
+      <!-- MODAL FORM -->
       <div
         class="modal fade"
-        id="myModal"
+        id="myModalForm"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              <div class="form">
+                <form>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="registerNome"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-label" for="registerNome"
+                          >Nome Completo</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Text input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="date"
+                      id="registerDataAdmi"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="registerDataAdmi"
+                      >Data Admissão</label
+                    >
+                  </div>
+                  <!-- Text input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="registerSalario"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="registerSalario"
+                      >Salário</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="registerDesempenho"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="registerDesempenho"
+                      >Desempenho</label
+                    >
+                  </div>
+
+                  <!-- Submit button -->
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    onclick="registerFuncionario()"
+                  >
+                    Cadastrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL FORM UPDATE -->
+      <div
+        class="modal fade"
+        id="myModalFormUpdate"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-mdb-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+              <div class="form">
+                <form>
+                  <!-- 2 column grid layout with text inputs for the first and last names -->
+                  <div class="row mb-4">
+                    <div class="col">
+                      <div class="form-outline mb-4">
+                        <input
+                          type="number"
+                          id="updateMatricula"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-label" for="updateMatricula"
+                          >Matricula</label
+                        >
+                      </div>
+
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="updateNome"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-label" for="updateNome"
+                          >Nome Completo</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Text input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="date"
+                      id="updateDataAdmi"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="updateDataAdmi"
+                      >Data Admissão</label
+                    >
+                  </div>
+
+                  <!-- Text input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="updateSalario"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="updateSalario"
+                      >Salário</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="date"
+                      id="updateDataPagto"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="updateDataPagto"
+                      >Data Pagamento</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="updateDesempenho"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="updateDesempenho"
+                      >Desempenho</label
+                    >
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input
+                      type="text"
+                      id="updateBonificacao"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-label" for="updateBonificacao"
+                      >Bonificação</label
+                    >
+                  </div>
+
+                  <!-- Submit button -->
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    onclick="updateFuncionario()"
+                  >
+                    Atualizar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL INFO -->
+      <div
+        class="modal fade"
+        id="myModalInfo"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -51,31 +272,34 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body d-flex align-items-center flex-column">
-              <table class="table table-modal">
-                <thead>
-                  <tr>
-                    <th>Nome Completo</th>
-                    <th>Data Admissão</th>
-                    <th>Salário</th>
-                    <th>Data Pagamento</th>
-                    <th>Desempenho</th>
-                    <th>Bonificação</th>
-                  </tr>
-                </thead>
-                <tbody class="modal-corpo"></tbody>
-              </table>
+            <div class="modal-corpo-control">
+              <div class="table-responsive">
+                <table class="table table-modal">
+                  <thead>
+                    <tr>
+                      <th>Mátricula</th>
+                      <th>Nome Completo</th>
+                      <th>Data Admissão</th>
+                      <th>Salário</th>
+                      <th>Data Pagamento</th>
+                      <th>Desempenho</th>
+                      <th>Bonificação</th>
+                    </tr>
+                  </thead>
+                  <tbody class="modal-corpo"></tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <table class="table table-hover">
+      <table class="table table-hover table-decorator">
         <thead>
           <tr>
             <th>Nome Completo</th>
             <th>Data Admissão</th>
-            <th>Informações</th>
+            <th>Opções</th>
           </tr>
         </thead>
         <tbody id="corpo"></tbody>
