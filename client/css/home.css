@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+main .table {
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+}
+main .table-modal {
+  width: 70%;
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 1rem;
+  }
+}
